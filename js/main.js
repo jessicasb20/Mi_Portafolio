@@ -211,11 +211,15 @@ function initHeroParallax() {
 }
 
 // ============================================
-//   SCROLL REVEAL — para secciones futuras
+//   SCROLL REVEAL — todas las clases de animación
 // ============================================
 function initScrollReveal() {
-  const els = document.querySelectorAll('.reveal');
+  // Selecciona todos los elementos con cualquier clase reveal
+  const els = document.querySelectorAll(
+    '.reveal, .reveal-left, .reveal-right, .reveal-scale'
+  );
   if (!els.length) return;
+
   const obs = new IntersectionObserver(entries => {
     entries.forEach(e => {
       if (e.isIntersecting) {
@@ -223,7 +227,8 @@ function initScrollReveal() {
         obs.unobserve(e.target);
       }
     });
-  }, { threshold: 0.15 });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
   els.forEach(el => obs.observe(el));
 }
 
@@ -292,8 +297,10 @@ function initContactForm() {
       form.reset();
 
     } catch (err) {
-      // Error
-      console.error('EmailJS error:', err);
+      // Error — muestra el error exacto en consola para depurar
+      console.error('EmailJS error completo:', err);
+      console.error('Status:', err.status);
+      console.error('Texto:', err.text);
       status.textContent = '❌ Hubo un error. Escríbeme directamente a jessicaserpabuitron@gmail.com';
       status.style.color = '#f08080';
     }
@@ -308,7 +315,42 @@ function initContactForm() {
   });
 }
 
-// Agregar initContactForm al DOMContentLoaded
+
+// ============================================
+//   PROYECTOS — toque en móvil
+//   Al tocar una tarjeta muestra el overlay,
+//   al tocar fuera lo oculta
+// ============================================
+function initProjectTouch() {
+  const cards = document.querySelectorAll('.project-card');
+  if (!cards.length) return;
+
+  // Solo activo en dispositivos touch
+  if (!('ontouchstart' in window)) return;
+
+  cards.forEach(card => {
+    card.addEventListener('touchstart', (e) => {
+      // Si ya está activa, seguir el link
+      if (card.classList.contains('touched')) return;
+      e.preventDefault();
+      // Desactivar todas las demás
+      cards.forEach(c => c.classList.remove('touched'));
+      // Activar esta
+      card.classList.add('touched');
+    }, { passive: false });
+  });
+
+  // Toque fuera cierra todas
+  document.addEventListener('touchstart', (e) => {
+    if (!e.target.closest('.project-card')) {
+      cards.forEach(c => c.classList.remove('touched'));
+    }
+  });
+}
+// ============================================
+//   INIT ADICIONAL
+// ============================================
 document.addEventListener('DOMContentLoaded', () => {
   initContactForm();
+  initProjectTouch();
 });
