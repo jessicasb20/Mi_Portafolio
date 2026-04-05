@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jessica Serpa — Portafolio</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+
+  <!-- Cursor personalizado -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+  <div class="cursor-corners" id="cursorCorners"></div>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-logo">PORTA<span>FOLIO</span></div>
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#inicio" class="nav-link">Inicio</a></li>
+      <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#experiencia" class="nav-link">Experiencia</a></li>
+      <li><a href="#certificaciones" class="nav-link">Certificaciones</a></li>
+      <li><a href="#contacto" class="nav-link">Contáctame</a></li>
+    </ul>
+  </nav>
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="inicio">
+    <div class="stars" id="stars"></div>
+
+    <div class="hero-text" id="heroText">
+      <p class="hero-greeting">Hola, soy</p>
+      <h1 class="hero-name">
+        <span class="name-line">Jessica</span>
+        <span class="name-line name-last">Serpa<span class="cursor-blink">_</span></span>
+      </h1>
+      <span class="hero-name-underline"></span>
+      <h2 class="hero-title">Soy <span class="typed-text"></span><span class="type-cursor">|</span></h2>
+      <p class="hero-desc">
+        Diseñadora y desarrolladora apasionada por crear experiencias digitales únicas, funcionales y visualmente
+        impactantes.
+      </p>
+      <div class="hero-buttons">
+        <a href="assets/docs/cv.pdf" download="CV_Jessica_Serpa.pdf" class="btn-primary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" width="16" height="16">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+            <polyline points="7 10 12 15 17 10" />
+            <line x1="12" y1="15" x2="12" y2="3" />
+          </svg>
+          Descargar CV
+        </a>
+        <a href="#contacto" class="btn-outline">Contáctame</a>
+      </div>
+      <div class="hero-socials">
+        <a href="https://www.linkedin.com/in/jessicaserpabuitrón" target="_blank" rel="noopener" class="social-link">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
+            <path
+              d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+          </svg>
+          <span class="social-tooltip">LinkedIn</span>
+        </a>
+        <a href="mailto:jessicaserpabuitron@gmail.com" class="social-link">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
+            <path
+              d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z" />
+          </svg>
+          <span class="social-tooltip">Gmail</span>
+        </a>
+        <a href="https://github.com/tu-usuario" target="_blank" rel="noopener" class="social-link">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
+            <path
+              d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+          </svg>
+          <span class="social-tooltip">GitHub</span>
+        </a>
+        <!-- WhatsApp -->
+        <a href="https://wa.me/51985893049" target="_blank" rel="noopener" class="social-link">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
+            <path
+              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z" />
+          </svg>
+          <span class="social-tooltip">WhatsApp</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-image" id="heroImage">
+      <div class="card-back"></div>
+      <div class="card-front"></div>
+      <div class="profile-wrapper">
+        <img src="assets/img/profile.png" alt="Jessica Serpa" class="profile-img" />
+      </div>
+      <div class="deco deco-plus">+</div>
+      <div class="deco deco-circle-sm"></div>
+      <div class="deco deco-dot d1"></div>
+      <div class="deco deco-dot d2"></div>
+    </div>
+  </section>
+
+  <!-- ========== PROYECTOS ========== -->
+  <section class="projects" id="proyectos">
+    <div class="section-header reveal">
+      <span class="section-tag">Mi trabajo</span>
+      <h2 class="section-title">Proyectos <span>Destacados</span></h2>
+      <p class="section-desc">Una selección de proyectos que reflejan mi pasión por el diseño y el desarrollo.</p>
+    </div>
+
+    <div class="projects-grid">
+
+      <!-- PROYECTO 1 → cambia: imagen, nombre, descripción, tecnologías, links -->
+      <article class="project-card reveal">
+        <div class="project-img-wrap">
+          <img src="assets/img/proyectos/proyecto1.png" alt="Proyecto 1" class="project-img" />
+          <div class="project-overlay">
+            <div class="project-overlay-content">
+              <span class="project-tag">HTML · CSS · JS</span>
+              <h3 class="project-name">Proyecto 1</h3>
+              <p class="project-desc">Descripción breve del proyecto. Explica qué hace, qué problema resuelve y qué
+                aprendiste.</p>
+              <div class="project-links">
+                <a href="#" class="project-btn" target="_blank" rel="noopener">
+                  Ver proyecto
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                    <polyline points="15 3 21 3 21 9" />
+                    <line x1="10" y1="14" x2="21" y2="3" />
+                  </svg>
+                </a>
+                <a href="#" class="project-btn project-btn-outline" target="_blank" rel="noopener">
+                  GitHub
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="13" height="13">
+                    <path
+                      d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- PROYECTO 2 → cambia: imagen, nombre, descripción, tecnologías, links -->
+      <article class="project-card reveal">
+        <div class="project-img-wrap">
+          <img src="assets/img/proyectos/proyecto2.png" alt="Proyecto 2" class="project-img" />
+          <div class="project-overlay">
+            <div class="project-overlay-content">
+              <span class="project-tag">React · CSS</span>
+              <h3 class="project-name">Proyecto 2</h3>
+              <p class="project-desc">Descripción breve del proyecto. Explica qué hace, qué problema resuelve y qué
+                aprendiste.</p>
+              <div class="project-links">
+                <a href="#" class="project-btn" target="_blank" rel="noopener">
+                  Ver proyecto
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                    <polyline points="15 3 21 3 21 9" />
+                    <line x1="10" y1="14" x2="21" y2="3" />
+                  </svg>
+                </a>
+                <a href="#" class="project-btn project-btn-outline" target="_blank" rel="noopener">
+                  GitHub
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="13" height="13">
+                    <path
+                      d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- PROYECTO 3 → cambia: imagen, nombre, descripción, tecnologías, links -->
+      <article class="project-card reveal">
+        <div class="project-img-wrap">
+          <img src="assets/img/proyectos/proyecto3.png" alt="Proyecto 3" class="project-img" />
+          <div class="project-overlay">
+            <div class="project-overlay-content">
+              <span class="project-tag">HTML · CSS · JS</span>
+              <h3 class="project-name">Proyecto 3</h3>
+              <p class="project-desc">Descripción breve del proyecto. Explica qué hace, qué problema resuelve y qué
+                aprendiste.</p>
+              <div class="project-links">
+                <a href="#" class="project-btn" target="_blank" rel="noopener">
+                  Ver proyecto
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                    <polyline points="15 3 21 3 21 9" />
+                    <line x1="10" y1="14" x2="21" y2="3" />
+                  </svg>
+                </a>
+                <a href="#" class="project-btn project-btn-outline" target="_blank" rel="noopener">
+                  GitHub
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="13" height="13">
+                    <path
+                      d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- PROYECTO 4 → cambia: imagen, nombre, descripción, tecnologías, links -->
+      <article class="project-card reveal">
+        <div class="project-img-wrap">
+          <img src="assets/img/proyectos/proyecto4.png" alt="Proyecto 4" class="project-img" />
+          <div class="project-overlay">
+            <div class="project-overlay-content">
+              <span class="project-tag">Figma · UI/UX</span>
+              <h3 class="project-name">Proyecto 4</h3>
+              <p class="project-desc">Descripción breve del proyecto. Explica qué hace, qué problema resuelve y qué
+                aprendiste.</p>
+              <div class="project-links">
+                <a href="#" class="project-btn" target="_blank" rel="noopener">
+                  Ver proyecto
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                    <polyline points="15 3 21 3 21 9" />
+                    <line x1="10" y1="14" x2="21" y2="3" />
+                  </svg>
+                </a>
+                <a href="#" class="project-btn project-btn-outline" target="_blank" rel="noopener">
+                  GitHub
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="13" height="13">
+                    <path
+                      d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ========== SKILLS ========== -->
+  <section class="skills" id="skills">
+    <div class="section-header reveal">
+      <span class="section-tag">Lo que manejo</span>
+      <h2 class="section-title">Mis <span>Skills</span></h2>
+      <p class="section-desc">Tecnologías y herramientas con las que trabajo día a día.</p>
+    </div>
+
+    <div class="skills-grid">
+      <!-- CAMBIA los nombres e iconos según tus habilidades reales -->
+      <div class="skill-card reveal">
+        <div class="skill-icon">🌐</div><span class="skill-name">HTML</span>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-icon">🎨</div><span class="skill-name">CSS</span>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-icon">⚡</div><span class="skill-name">JavaScript</span>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-icon">⚛️</div><span class="skill-name">React</span>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-icon">🎭</div><span class="skill-name">Figma</span>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-icon">🐙</div><span class="skill-name">GitHub</span>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-icon">📱</div><span class="skill-name">UI/UX</span>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-icon">🗄️</div><span class="skill-name">SQL</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== EXPERIENCIA ========== -->
+  <section class="experience" id="experiencia">
+    <div class="section-header reveal">
+      <span class="section-tag">Mi trayectoria</span>
+      <h2 class="section-title">Experiencia <span>Laboral</span></h2>
+    </div>
+
+    <div class="timeline">
+
+      <!-- CAMBIA cada bloque con tu experiencia real -->
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <span class="timeline-date">2023 — Presente</span>
+          <h3 class="timeline-role">Desarrolladora Frontend</h3>
+          <span class="timeline-company">Nombre de la Empresa</span>
+          <p class="timeline-desc">Descripción de tus responsabilidades y logros en este cargo. Puedes mencionar
+            proyectos destacados, tecnologías usadas y resultados concretos.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <span class="timeline-date">2022 — 2023</span>
+          <h3 class="timeline-role">Diseñadora UI/UX</h3>
+          <span class="timeline-company">Nombre de la Empresa</span>
+          <p class="timeline-desc">Descripción de tus responsabilidades y logros en este cargo. Puedes mencionar
+            proyectos destacados, tecnologías usadas y resultados concretos.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <span class="timeline-date">2021 — 2022</span>
+          <h3 class="timeline-role">Practicante de Desarrollo</h3>
+          <span class="timeline-company">Nombre de la Empresa</span>
+          <p class="timeline-desc">Descripción de tus responsabilidades y logros en este cargo. Puedes mencionar
+            proyectos destacados, tecnologías usadas y resultados concretos.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========== CERTIFICACIONES ========== -->
+  <section class="certifications" id="certificaciones">
+    <div class="section-header reveal">
+      <span class="section-tag">Formación</span>
+      <h2 class="section-title">Mis <span>Certificaciones</span></h2>
+      <p class="section-desc">Cursos y certificaciones que respaldan mi formación continua.</p>
+    </div>
+
+    <div class="certs-grid">
+
+      <!-- CAMBIA cada tarjeta con tus certificaciones reales -->
+      <div class="cert-card reveal">
+        <div class="cert-icon">🎓</div>
+        <div class="cert-info">
+          <h3 class="cert-name">Nombre del Certificado</h3>
+          <span class="cert-issuer">Plataforma (Udemy / Coursera / etc.)</span>
+          <span class="cert-date">2024</span>
+        </div>
+        <a href="#" class="cert-link" target="_blank" rel="noopener">Ver →</a>
+      </div>
+
+      <div class="cert-card reveal">
+        <div class="cert-icon">🎓</div>
+        <div class="cert-info">
+          <h3 class="cert-name">Nombre del Certificado</h3>
+          <span class="cert-issuer">Plataforma</span>
+          <span class="cert-date">2023</span>
+        </div>
+        <a href="#" class="cert-link" target="_blank" rel="noopener">Ver →</a>
+      </div>
+
+      <div class="cert-card reveal">
+        <div class="cert-icon">🎓</div>
+        <div class="cert-info">
+          <h3 class="cert-name">Nombre del Certificado</h3>
+          <span class="cert-issuer">Plataforma</span>
+          <span class="cert-date">2023</span>
+        </div>
+        <a href="#" class="cert-link" target="_blank" rel="noopener">Ver →</a>
+      </div>
+
+      <div class="cert-card reveal">
+        <div class="cert-icon">🎓</div>
+        <div class="cert-info">
+          <h3 class="cert-name">Nombre del Certificado</h3>
+          <span class="cert-issuer">Plataforma</span>
+          <span class="cert-date">2022</span>
+        </div>
+        <a href="#" class="cert-link" target="_blank" rel="noopener">Ver →</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========== CONTACTO ========== -->
+  <section class="contact" id="contacto">
+    <div class="section-header reveal">
+      <span class="section-tag">Hablemos</span>
+      <h2 class="section-title">Contácta<span>me</span></h2>
+      <p class="section-desc">¿Tienes un proyecto en mente? Me encantaría escucharte.</p>
+    </div>
+
+    <div class="contact-wrapper reveal">
+      <form class="contact-form" id="contactForm" novalidate>
+        <div class="form-group">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="tucorreo@email.com" required />
+        </div>
+        <div class="form-group">
+          <label for="asunto">Asunto</label>
+          <input type="text" id="asunto" name="asunto" placeholder="¿En qué puedo ayudarte?" required />
+        </div>
+        <div class="form-group">
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="5" placeholder="Cuéntame sobre tu proyecto..."
+            required></textarea>
+        </div>
+        <button type="submit" class="btn-primary btn-submit">
+          Enviar mensaje
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+            <line x1="22" y1="2" x2="11" y2="13" />
+            <polygon points="22 2 15 22 11 13 2 9 22 2" />
+          </svg>
+        </button>
+        <p class="form-status" id="formStatus"></p>
+      </form>
+
+      <div class="contact-info">
+        <h3 class="contact-info-title">También puedes encontrarme en</h3>
+        <div class="contact-links">
+          <a href="mailto:jessicaserpabuitron@gmail.com" class="contact-item">
+            <span class="contact-item-icon">✉️</span>
+            <span>jessicaserpabuitron@gmail.com</span>
+          </a>
+          <a href="https://www.linkedin.com/in/jessicaserpabuitrón" target="_blank" rel="noopener" class="contact-item">
+            <span class="contact-item-icon">💼</span>
+            <span>linkedin.com/in/jessicaserpabuitrón</span>
+          </a>
+          <a href="https://github.com/tu-usuario" target="_blank" rel="noopener" class="contact-item">
+            <span class="contact-item-icon">🐙</span>
+            <span>github.com/tu-usuario</span>
+          </a>
+          <a href="https://wa.me/51985893049" target="_blank" rel="noopener" class="contact-item">
+            <span class="contact-item-icon">💬</span>
+            <span>+51 985 893 049</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <p>Diseñado y desarrollado por <span>Jessica Serpa</span> · 2025</p>
+    <p class="footer-sub">Hecho con 💜 y mucho café</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+  <script>
+    emailjs.init({
+      publicKey: "4RK8KrrOAZ3jnu9kY"
+    });
+  </script>
+
+
+</body>
+
+</html>
